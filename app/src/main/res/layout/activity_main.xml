@@ -9,11 +9,11 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:gravity="center|end"
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:text="TextView"
+        android:gravity="center|end"
+        android:text="0"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,14 +25,15 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:columnCount="4"
+        app:rowCount="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:rowCount="5">
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <Button
             android:id="@+id/button1"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
@@ -46,6 +47,7 @@
 
         <Button
             android:id="@+id/button2"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
@@ -59,6 +61,7 @@
 
         <Button
             android:id="@+id/button3"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
@@ -72,10 +75,11 @@
 
         <Button
             android:id="@+id/button4"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#9D78D3"
+            android:backgroundTint="#9D78D3"
             android:text="*"
             app:layout_column="3"
             app:layout_columnWeight="1"
@@ -85,10 +89,11 @@
 
         <Button
             android:id="@+id/button5"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="7"
             app:layout_column="0"
             app:layout_columnWeight="1"
@@ -98,10 +103,11 @@
 
         <Button
             android:id="@+id/button6"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="8"
             app:layout_column="1"
             app:layout_columnWeight="1"
@@ -111,10 +117,11 @@
 
         <Button
             android:id="@+id/button7"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="9"
             app:layout_column="2"
             app:layout_columnWeight="1"
@@ -124,10 +131,11 @@
 
         <Button
             android:id="@+id/button8"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#9D78D3"
+            android:backgroundTint="#9D78D3"
             android:text="%"
             app:layout_column="3"
             app:layout_columnWeight="1"
@@ -137,10 +145,11 @@
 
         <Button
             android:id="@+id/button9"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="4"
             app:layout_column="0"
             app:layout_columnWeight="1"
@@ -150,10 +159,11 @@
 
         <Button
             android:id="@+id/button10"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="5"
             app:layout_column="1"
             app:layout_columnWeight="1"
@@ -163,10 +173,11 @@
 
         <Button
             android:id="@+id/button11"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="6"
             app:layout_column="2"
             app:layout_columnWeight="1"
@@ -176,10 +187,11 @@
 
         <Button
             android:id="@+id/button12"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#9D78D3"
+            android:backgroundTint="#9D78D3"
             android:text="+"
             app:layout_column="3"
             app:layout_columnWeight="1"
@@ -189,10 +201,11 @@
 
         <Button
             android:id="@+id/button13"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="1"
             app:layout_column="0"
             app:layout_columnWeight="1"
@@ -202,10 +215,11 @@
 
         <Button
             android:id="@+id/button14"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="2"
             app:layout_column="1"
             app:layout_columnWeight="1"
@@ -215,10 +229,11 @@
 
         <Button
             android:id="@+id/button15"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F1C075"
+            android:backgroundTint="#F1C075"
             android:text="3"
             app:layout_column="2"
             app:layout_columnWeight="1"
@@ -228,10 +243,11 @@
 
         <Button
             android:id="@+id/button16"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#9D78D3"
+            android:backgroundTint="#9D78D3"
             android:text="-"
             app:layout_column="3"
             app:layout_columnWeight="1"
@@ -241,10 +257,11 @@
 
         <Button
             android:id="@+id/button17"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="0"
             app:layout_column="0"
             app:layout_columnSpan="2"
@@ -255,10 +272,11 @@
 
         <Button
             android:id="@+id/button18"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#F0BF74"
+            android:backgroundTint="#F0BF74"
             android:text="."
             app:layout_column="2"
             app:layout_columnWeight="1"
@@ -268,10 +286,11 @@
 
         <Button
             android:id="@+id/button19"
+            style="@style/FlatMaterialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="1dp"
-            android:background="#9D78D3"
+            android:backgroundTint="#9D78D3"
             android:text="="
             app:layout_column="3"
             app:layout_columnWeight="1"

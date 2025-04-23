@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private double firstNumber = 0;
     private String operation = "";
     private boolean isNewOperation = true;
+    private boolean operationJustPressed = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +39,17 @@ public class MainActivity extends AppCompatActivity {
                 Button button = (Button) v;
                 String number = button.getText().toString();
 
-                if (isNewOperation) {
+                if (isNewOperation || operationJustPressed) {
                     currentNumber = "";
                     isNewOperation = false;
+                    operationJustPressed = false;
                 }
 
                 if (number.equals(".")) {
                     if (!currentNumber.contains(".")) {
                         currentNumber += ".";
                     }
-                } else{
+                } else {
                     currentNumber += number;
                 }
 
@@ -67,10 +69,15 @@ public class MainActivity extends AppCompatActivity {
         for (int id : operationIds) {
             findViewById(id).setOnClickListener(v -> {
                 Button button = (Button) v;
+
                 if (!currentNumber.isEmpty()) {
                     firstNumber = Double.parseDouble(currentNumber);
                     operation = button.getText().toString();
-                    currentNumber = "";
+                    operationJustPressed = true;
+                    updateDisplay();
+                } else if (!operation.isEmpty()) {
+
+                    operation = button.getText().toString();
                     updateDisplay();
                 }
             });
@@ -78,16 +85,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupSpecialButtons() {
-        // AC Button
+
         findViewById(R.id.button1).setOnClickListener(v -> {
             currentNumber = "";
             firstNumber = 0;
             operation = "";
             isNewOperation = true;
+            operationJustPressed = false;
             updateDisplay();
         });
 
-        // +/- Button
+
         findViewById(R.id.button2).setOnClickListener(v -> {
             if (!currentNumber.isEmpty()) {
                 double value = Double.parseDouble(currentNumber);
@@ -97,16 +105,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // = Button
+
         findViewById(R.id.button19).setOnClickListener(v -> {
-            if (!currentNumber.isEmpty() && !operation.isEmpty()) {
+            if (!operation.isEmpty() && !currentNumber.isEmpty()) {
                 performOperation();
                 operation = "";
                 isNewOperation = true;
             }
         });
 
-        // % Button
+
         findViewById(R.id.button8).setOnClickListener(v -> {
             if (!currentNumber.isEmpty()) {
                 double value = Double.parseDouble(currentNumber);
@@ -142,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        // Удаление .0 если число целое
+
         currentNumber = result % 1 == 0 ?
                 String.valueOf((int) result) :
                 String.valueOf(result);
