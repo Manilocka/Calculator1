@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные цвета -->
+    <color name="purple_500">#9D78D3</color>
+    <color name="purple_700">#6A4D9E</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Ваши существующие цвета -->
+    <color name="orange">#F0BF74</color>
+    <color name="light_purple">#CBB9E9</color>
+    <color name="dark_purple">#9D78D3</color>
+</resources>
